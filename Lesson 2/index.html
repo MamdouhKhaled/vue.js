@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+    <div id="app">
+        <p>Welcome back. {{ string }} we are happy to see you</p>
+        <p>Your age is {{ number + ' years' }}</p>
+        <p>will using Array Her and show Frist Element is {{ array[0] }} </p>
+        <p>Can use Boolen Value {{ boolen ? "yes ofcourse" : "Sory! i can`t" }}</p>
+        <p>you pass in exam {{object[0].testName + ' Score is ' + object[0].testResult }}</p>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        // Create New instent form vue
+        var app = new Vue({
+            el: "#app",   // el is keyword take by lang meaning Element
+            data: {
+                // data can use in my app by using {{ name of var her }}
+                string : 'Mamdouh Khaled', 
+                number : 35,
+                array : ['HTML', 'Css', 'JS', 'Vue'],
+                boolen : true,
+                object : [
+                        {
+                            testName : "test 1",
+                            testResult : "80%"
+                        },
+                        {
+                            testName : "test 2",
+                            testResult : "70%"
+                        }
+                    ],
+            }
+        });
+    </script>
+</body>
+</html>
