@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods Examples</title>
+</head>
+<body>
+    <div id="app">
+        <p>Say hello Form Function {{ sayHello() }}</p>
+        <p>Say my name Form Function {{ sayName() }}</p>
+        <p>Show Today {{ date }}</p>
+        <button @click="getDate">Get Date</button>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        // Create New instent form vue
+        var app = new Vue({
+            el: "#app",   // el is keyword take by lang meaning Element
+            data: { //data is keyword take by lang meaning data can passing to View
+                // data can use in my app by using {{ name of var her }}
+                string : 'Mamdouh Khaled', 
+                number : 35,
+                array : ['HTML', 'Css', 'JS', 'Vue'],
+                boolen : true,
+                object : [
+                        {
+                            testName : "test 1",
+                            testResult : "80%"
+                        },
+                        {
+                            testName : "test 2",
+                            testResult : "70%"
+                        }
+                    ],
+                date : "today"
+            },
+            methods: { // methods is keyword take by lang meaning function passing to View
+                sayHello : function(){
+                    return "hello!";
+                },
+                sayName : function(){
+                    return this.string;
+                },
+                getDate: function(){
+                    this.date = Date();
+                }
+            },
+        });
+    </script>
+</body>
+</html>
